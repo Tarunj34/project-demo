@@ -14,11 +14,23 @@ pipeline {
             }
         }
 
+        stage('Check Website Files') {
+            steps {
+                sh '''
+                    set -e
+                    ls -lh
+                    test -s index.html
+                    test -s style.css
+                '''
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh '''
                     set -e
-                    docker build -t ${DOCKER_IMAGE}:latest .
+                    docker build --no-cache \
+                        -t ${DOCKER_IMAGE}:latest .
                 '''
             }
         }
@@ -50,16 +62,42 @@ pipeline {
                 '''
             }
         }
+
+        stage('Run Container') {
+            steps {
+                sh '''
+                    set -e
+
+                    docker rm -f cont1 || true
+
+                    docker run -d \
+                        --name cont1 \
+                        -p 7777:80 \
+                        ${DOCKER_IMAGE}:latest
+                '''
+            }
+        }
+
+        stage('Verify Container') {
+            steps {
+                sh '''
+                    set -e
+                    docker ps
+                    docker exec cont1 ls -lh /usr/share/nginx/html/
+                '''
+            }
+        }
     }
 
     post {
         success {
-            echo 'Docker image built and pushed successfully!'
-            echo "Image: ${DOCKER_IMAGE}:latest"
+            echo 'Deployment successful!'
+            echo "Website: http://EC2_PUBLIC_IP:7777"
+            echo "Docker Image: ${DOCKER_IMAGE}:latest"
         }
 
         failure {
-            echo 'Pipeline failed. Check the Console Output.'
+            echo 'Pipeline failed. Check Console Output.'
         }
 
         always {
