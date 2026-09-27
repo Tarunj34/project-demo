@@ -10,13 +10,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git'
+                    url: 'https://github.com/Tarunj34/project-demo.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 sh '''
+                    set -e
                     docker build -t ${DOCKER_IMAGE}:latest .
                 '''
             }
@@ -32,9 +33,10 @@ pipeline {
                     )
                 ]) {
                     sh '''
+                        set -e
                         echo "$DOCKER_PASSWORD" | docker login \
-                        -u "$DOCKER_USERNAME" \
-                        --password-stdin
+                            -u "$DOCKER_USERNAME" \
+                            --password-stdin
                     '''
                 }
             }
@@ -43,6 +45,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 sh '''
+                    set -e
                     docker push ${DOCKER_IMAGE}:latest
                 '''
             }
@@ -52,10 +55,15 @@ pipeline {
     post {
         success {
             echo 'Docker image built and pushed successfully!'
+            echo "Image: ${DOCKER_IMAGE}:latest"
         }
 
         failure {
             echo 'Pipeline failed. Check the Console Output.'
+        }
+
+        always {
+            sh 'docker logout || true'
         }
     }
 }
