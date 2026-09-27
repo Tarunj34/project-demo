@@ -4,206 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Modern Website</title>
+    <title>DevOps | Automate. Deploy. Scale.</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="logo">Tech<span>Nova</span></div>
+
+            <div class="logo">
+                Dev<span>Ops</span>
+            </div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#process">Process</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="nav-btn">Get Started</a>
+            <a href="#tools" class="nav-button">Explore</a>
+
         </nav>
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
 
         <div class="hero-content">
-            <p class="tagline">WELCOME TO TECHNOVA</p>
+
+            <div class="badge">
+                ⚡ DEVOPS ENGINEERING
+            </div>
 
             <h1>
-                Build Your
-                <span>Digital Future</span>
+                Build.
+                <span>Automate.</span>
+                Deploy.
             </h1>
 
-            <p class="hero-text">
-                We create modern, fast and responsive digital experiences
-                using powerful technologies and innovative ideas.
+            <p>
+                DevOps brings development and operations together to
+                build, test, deploy and manage applications faster,
+                reliably and continuously.
             </p>
 
             <div class="hero-buttons">
-                <a href="#services" class="primary-btn">Explore Services</a>
-                <a href="#about" class="secondary-btn">Learn More</a>
+                <a href="#tools" class="primary-btn">
+                    Explore DevOps
+                </a>
+
+                <a href="#process" class="secondary-btn">
+                    How It Works →
+                </a>
             </div>
+
         </div>
 
-        <div class="hero-card">
-            <div class="circle"></div>
 
-            <div class="card-content">
-                <div class="code-icon">&lt;/&gt;</div>
+        <!-- Terminal -->
+        <div class="terminal">
 
-                <h3>Modern Development</h3>
+            <div class="terminal-header">
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <p>devops@server:~</p>
+            </div>
+
+            <div class="terminal-body">
 
                 <p>
-                    HTML • CSS • JavaScript
+                    <span class="green">user@devops</span>:~$
+                    docker build -t app .
                 </p>
+
+                <p class="success">
+                    ✓ Building application...
+                </p>
+
+                <p class="success">
+                    ✓ Image created successfully
+                </p>
+
+                <p>
+                    <span class="green">user@devops</span>:~$
+                    docker run -d -p 80:80 app
+                </p>
+
+                <p class="success">
+                    ✓ Container started
+                </p>
+
+                <p>
+                    <span class="green">user@devops</span>:~$
+                    kubectl get pods
+                </p>
+
+                <p class="blue">
+                    app-pod-7f8d9c → Running
+                </p>
+
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- DevOps Cycle -->
+    <section class="process" id="process">
 
-        <div class="about-image">
-            <div class="about-box">
-                <span>01</span>
-                <h3>Innovation</h3>
-                <p>Creating solutions for the modern digital world.</p>
-            </div>
+        <div class="section-title">
+
+            <p>DEVOPS LIFECYCLE</p>
+
+            <h2>
+                From Code to <span>Production</span>
+            </h2>
+
         </div>
+
+
+        <div class="process-container">
+
+            <div class="process-card">
+                <div class="number">01</div>
+                <h3>Plan</h3>
+                <p>Plan features, tasks and development workflows.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="process-card">
+                <div class="number">02</div>
+                <h3>Code</h3>
+                <p>Develop and manage application source code.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="process-card">
+                <div class="number">03</div>
+                <h3>Build</h3>
+                <p>Build applications and create deployable artifacts.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="process-card">
+                <div class="number">04</div>
+                <h3>Deploy</h3>
+                <p>Automatically deploy applications to production.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tools -->
+    <section class="tools" id="tools">
+
+        <div class="section-title">
+
+            <p>POPULAR TECHNOLOGIES</p>
+
+            <h2>
+                DevOps <span>Toolchain</span>
+            </h2>
+
+        </div>
+
+
+        <div class="tools-grid">
+
+            <div class="tool-card">
+                <div class="tool-icon">GIT</div>
+                <h3>Git</h3>
+                <p>Version Control</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">🐳</div>
+                <h3>Docker</h3>
+                <p>Containerization</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">J</div>
+                <h3>Jenkins</h3>
+                <p>CI/CD Automation</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">☁</div>
+                <h3>AWS</h3>
+                <p>Cloud Computing</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">K8</div>
+                <h3>Kubernetes</h3>
+                <p>Container Orchestration</p>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon">TF</div>
+                <h3>Terraform</h3>
+                <p>Infrastructure as Code</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
 
         <div class="about-content">
 
-            <p class="section-label">ABOUT US</p>
+            <p>WHY DEVOPS?</p>
 
-            <h2>We turn ideas into <span>digital experiences.</span></h2>
+            <h2>
+                Faster development.
+                <span>Better operations.</span>
+            </h2>
 
             <p>
-                TechNova is focused on building clean, responsive and
-                user-friendly websites. Our goal is to combine attractive
-                design with reliable technology.
+                DevOps practices help teams automate repetitive tasks,
+                improve collaboration, reduce deployment time and
+                deliver reliable software continuously.
             </p>
 
             <div class="stats">
 
                 <div>
-                    <h3>50+</h3>
-                    <p>Projects</p>
+                    <strong>CI/CD</strong>
+                    <span>Continuous Delivery</span>
                 </div>
 
                 <div>
-                    <h3>25+</h3>
-                    <p>Clients</p>
+                    <strong>IaC</strong>
+                    <span>Infrastructure as Code</span>
                 </div>
 
                 <div>
-                    <h3>5+</h3>
-                    <p>Years</p>
+                    <strong>∞</strong>
+                    <span>Continuous Improvement</span>
                 </div>
 
             </div>
 
         </div>
-
-    </section>
-
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-
-        <div class="section-heading">
-            <p class="section-label">WHAT WE DO</p>
-
-            <h2>Our <span>Services</span></h2>
-
-            <p>
-                Everything you need to build your online presence.
-            </p>
-        </div>
-
-
-        <div class="service-container">
-
-            <div class="service-card">
-                <div class="service-icon">01</div>
-
-                <h3>Web Design</h3>
-
-                <p>
-                    Beautiful and modern website designs that work
-                    perfectly on all devices.
-                </p>
-
-                <a href="#">Learn More →</a>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">02</div>
-
-                <h3>Development</h3>
-
-                <p>
-                    Fast and responsive websites built using modern
-                    web technologies.
-                </p>
-
-                <a href="#">Learn More →</a>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">03</div>
-
-                <h3>Cloud Solutions</h3>
-
-                <p>
-                    Scalable cloud solutions designed for modern
-                    businesses and applications.
-                </p>
-
-                <a href="#">Learn More →</a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-
-        <div class="contact-content">
-
-            <p class="section-label">CONTACT US</p>
-
-            <h2>Let's build something <span>great.</span></h2>
-
-            <p>
-                Have a project idea? Send us a message and let's
-                create something amazing together.
-            </p>
-
-        </div>
-
-
-        <form class="contact-form">
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Your Email" required>
-
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
 
     </section>
 
@@ -212,21 +273,18 @@
     <footer>
 
         <div class="footer-logo">
-            Tech<span>Nova</span>
+            Dev<span>Ops</span>
         </div>
 
         <p>
-            © 2026 TechNova. All Rights Reserved.
+            Automate everything. Deploy anything.
         </p>
 
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-        </div>
+        <p>
+            © 2026 DevOps Engineering
+        </p>
 
     </footer>
 
 </body>
 </html>
-
