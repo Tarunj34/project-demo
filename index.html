@@ -3,288 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevOps | Automate. Deploy. Scale.</title>
+    <title>DevOps | From Code to Cloud</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-
-            <div class="logo">
-                Dev<span>Ops</span>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-
-            <a href="#tools" class="nav-button">Explore</a>
-
-        </nav>
-    </header>
 
 
-    <!-- Hero -->
-    <section class="hero" id="home">
+<header class="navbar">
 
-        <div class="hero-content">
+    <div class="logo">
+        <div class="logo-icon">∞</div>
+        <span>Dev<span>Ops</span></span>
+    </div>
 
-            <div class="badge">
-                ⚡ DEVOPS ENGINEERING
-            </div>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+    </nav>
 
-            <h1>
-                Build.
-                <span>Automate.</span>
-                Deploy.
-            </h1>
+    <a href="#tools" class="explore-btn">
+        Explore <span>→</span>
+    </a>
 
-            <p>
-                DevOps brings development and operations together to
-                build, test, deploy and manage applications faster,
-                reliably and continuously.
-            </p>
+</header>
 
-            <div class="hero-buttons">
-                <a href="#tools" class="primary-btn">
-                    Explore DevOps
-                </a>
 
-                <a href="#process" class="secondary-btn">
-                    How It Works →
-                </a>
-            </div>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            AUTOMATE
+            <span>•</span>
+            BUILD
+            <span>•</span>
+            DEPLOY
+            <span>•</span>
+            SCALE
+        </div>
+
+        <h1>
+            Modern DevOps
+            <br>
+            <span>From Code to Cloud</span>
+        </h1>
+
+        <p>
+            A complete DevOps toolchain to automate development,
+            build, test and deploy applications on the cloud.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#tools" class="primary-btn">
+                🚀 Get Started
+            </a>
+
+            <a href="#process" class="secondary-btn">
+                ▶ View Process
+            </a>
 
         </div>
 
+    </div>
 
-        <!-- Terminal -->
-        <div class="terminal">
 
-            <div class="terminal-header">
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <!-- DEVOPS VISUAL -->
 
-                <p>devops@server:~</p>
-            </div>
+    <div class="devops-visual">
 
-            <div class="terminal-body">
+        <div class="glow-circle"></div>
 
-                <p>
-                    <span class="green">user@devops</span>:~$
-                    docker build -t app .
-                </p>
-
-                <p class="success">
-                    ✓ Building application...
-                </p>
-
-                <p class="success">
-                    ✓ Image created successfully
-                </p>
-
-                <p>
-                    <span class="green">user@devops</span>:~$
-                    docker run -d -p 80:80 app
-                </p>
-
-                <p class="success">
-                    ✓ Container started
-                </p>
-
-                <p>
-                    <span class="green">user@devops</span>:~$
-                    kubectl get pods
-                </p>
-
-                <p class="blue">
-                    app-pod-7f8d9c → Running
-                </p>
-
-            </div>
-
+        <div class="infinity">
+            ∞
         </div>
 
-    </section>
-
-
-    <!-- DevOps Cycle -->
-    <section class="process" id="process">
-
-        <div class="section-title">
-
-            <p>DEVOPS LIFECYCLE</p>
-
-            <h2>
-                From Code to <span>Production</span>
-            </h2>
-
+        <div class="tool-card git">
+            <div class="tool-icon">🔶</div>
+            <strong>Git</strong>
         </div>
 
-
-        <div class="process-container">
-
-            <div class="process-card">
-                <div class="number">01</div>
-                <h3>Plan</h3>
-                <p>Plan features, tasks and development workflows.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="process-card">
-                <div class="number">02</div>
-                <h3>Code</h3>
-                <p>Develop and manage application source code.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="process-card">
-                <div class="number">03</div>
-                <h3>Build</h3>
-                <p>Build applications and create deployable artifacts.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="process-card">
-                <div class="number">04</div>
-                <h3>Deploy</h3>
-                <p>Automatically deploy applications to production.</p>
-            </div>
-
+        <div class="tool-card docker">
+            <div class="tool-icon">🐳</div>
+            <strong>Docker</strong>
         </div>
 
-    </section>
-
-
-    <!-- Tools -->
-    <section class="tools" id="tools">
-
-        <div class="section-title">
-
-            <p>POPULAR TECHNOLOGIES</p>
-
-            <h2>
-                DevOps <span>Toolchain</span>
-            </h2>
-
+        <div class="tool-card jenkins">
+            <div class="tool-icon">👨‍💻</div>
+            <strong>Jenkins</strong>
         </div>
 
+        <div class="tool-card aws">
+            <div class="tool-icon">☁️</div>
+            <strong>AWS</strong>
+        </div>
 
-        <div class="tools-grid">
+        <div class="tool-card kubernetes">
+            <div class="tool-icon">☸️</div>
+            <strong>Kubernetes</strong>
+        </div>
 
-            <div class="tool-card">
-                <div class="tool-icon">GIT</div>
+    </div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section class="technologies" id="tools">
+
+    <div class="section-heading">
+
+        <div>
+            <h2>Popular Technologies</h2>
+            <p>Tools we use in this DevOps project.</p>
+        </div>
+
+    </div>
+
+
+    <div class="technology-grid">
+
+        <div class="technology-card">
+            <div class="tech-icon git-icon">◆</div>
+            <div>
                 <h3>Git</h3>
                 <p>Version Control</p>
             </div>
+        </div>
 
-            <div class="tool-card">
-                <div class="tool-icon">🐳</div>
+
+        <div class="technology-card">
+            <div class="tech-icon docker-icon">🐳</div>
+            <div>
                 <h3>Docker</h3>
                 <p>Containerization</p>
             </div>
+        </div>
 
-            <div class="tool-card">
-                <div class="tool-icon">J</div>
+
+        <div class="technology-card">
+            <div class="tech-icon jenkins-icon">⚙</div>
+            <div>
                 <h3>Jenkins</h3>
                 <p>CI/CD Automation</p>
             </div>
+        </div>
 
-            <div class="tool-card">
-                <div class="tool-icon">☁</div>
+
+        <div class="technology-card">
+            <div class="tech-icon aws-icon">AWS</div>
+            <div>
                 <h3>AWS</h3>
                 <p>Cloud Computing</p>
             </div>
+        </div>
 
-            <div class="tool-card">
-                <div class="tool-icon">K8</div>
+
+        <div class="technology-card">
+            <div class="tech-icon k8s-icon">☸</div>
+            <div>
                 <h3>Kubernetes</h3>
                 <p>Container Orchestration</p>
             </div>
-
-            <div class="tool-card">
-                <div class="tool-icon">TF</div>
-                <h3>Terraform</h3>
-                <p>Infrastructure as Code</p>
-            </div>
-
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- About -->
-    <section class="about" id="about">
+<!-- ================= DEVOPS PROCESS ================= -->
 
-        <div class="about-content">
+<section class="process" id="process">
 
-            <p>WHY DEVOPS?</p>
+    <div class="process-header">
 
-            <h2>
-                Faster development.
-                <span>Better operations.</span>
-            </h2>
+        <div>
+            <h2>DevOps Lifecycle</h2>
 
             <p>
-                DevOps practices help teams automate repetitive tasks,
-                improve collaboration, reduce deployment time and
-                deliver reliable software continuously.
+                From planning to production — a continuous journey.
             </p>
+        </div>
 
-            <div class="stats">
+        <button class="learn-btn">
+            Learn More →
+        </button>
 
-                <div>
-                    <strong>CI/CD</strong>
-                    <span>Continuous Delivery</span>
-                </div>
+    </div>
 
-                <div>
-                    <strong>IaC</strong>
-                    <span>Infrastructure as Code</span>
-                </div>
 
-                <div>
-                    <strong>∞</strong>
-                    <span>Continuous Improvement</span>
-                </div>
+    <div class="lifecycle">
 
+        <!-- PLAN -->
+
+        <div class="process-card plan">
+
+            <div class="process-icon">💡</div>
+
+            <div>
+                <span>01. Plan</span>
+
+                <h3>Plan</h3>
+
+                <p>
+                    Plan features, tasks and development workflows.
+                </p>
             </div>
 
         </div>
 
-    </section>
+
+        <div class="arrow">→</div>
 
 
-    <!-- Footer -->
-    <footer>
+        <!-- CODE -->
 
-        <div class="footer-logo">
-            Dev<span>Ops</span>
+        <div class="process-card code">
+
+            <div class="process-icon">〈/〉</div>
+
+            <div>
+                <span>02. Code</span>
+
+                <h3>Code</h3>
+
+                <p>
+                    Develop and manage application source code.
+                </p>
+            </div>
+
         </div>
 
-        <p>
-            Automate everything. Deploy anything.
-        </p>
+
+        <div class="arrow">→</div>
+
+
+        <!-- BUILD -->
+
+        <div class="process-card build">
+
+            <div class="process-icon">⚙</div>
+
+            <div>
+                <span>03. Build</span>
+
+                <h3>Build</h3>
+
+                <p>
+                    Build applications and create deployable artifacts.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="arrow">→</div>
+
+
+        <!-- DEPLOY -->
+
+        <div class="process-card deploy">
+
+            <div class="process-icon">🚀</div>
+
+            <div>
+                <span>04. Deploy</span>
+
+                <h3>Deploy</h3>
+
+                <p>
+                    Automatically deploy applications to production.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <span class="small-title">ABOUT PROJECT</span>
+
+        <h2>
+            Automate.
+            <span>Integrate.</span>
+            Deploy.
+        </h2>
 
         <p>
-            © 2026 DevOps Engineering
+            This project demonstrates a modern DevOps workflow using
+            Git, Jenkins, Docker and AWS to automate the application
+            delivery process from source code to deployment.
         </p>
 
-    </footer>
+        <div class="stats">
+
+            <div>
+                <strong>01</strong>
+                <span>Source Control</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>CI/CD Pipeline</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Containerization</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Cloud Deployment</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        Dev<span>Ops</span>
+    </div>
+
+    <p>
+        © 2026 DevOps Project. Built with automation.
+    </p>
+
+</footer>
+
 
 </body>
 </html>
