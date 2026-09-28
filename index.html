@@ -8,8 +8,471 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #070913;
+            --bg-card: #0f1322;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            
+            --primary-gradient: linear-gradient(90deg, #8b5cf6, #3b82f6);
+            --btn-gradient: linear-gradient(90deg, #6366f1, #8b5cf6);
+            
+            --color-git: #f05032;
+            --color-docker: #2496ed;
+            --color-jenkins: #d33833;
+            --color-aws: #ff9900;
+            --color-k8s: #326ce5;
+
+            --border-color: #1e293b;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links li {
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+
+        .nav-links li.active {
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links li.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        .nav-links li:hover {
+            color: var(--text-main);
+        }
+
+        .btn-explore {
+            background: var(--primary-gradient);
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s;
+        }
+        
+        .btn-explore:hover {
+            opacity: 0.9;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 0;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: #3b82f6;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-tag span {
+            color: var(--text-muted);
+            font-size: 0.5rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--btn-gradient);
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: 1px solid #334155;
+            color: white;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CSS Graphic to replace the 3D image */
+        .hero-graphic {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(7,9,19,0) 70%);
+        }
+
+        .infinity-loop {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+        }
+
+        /* Floating Tool Cards */
+        .float-card {
+            position: absolute;
+            background: rgba(15, 19, 34, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-card i { font-size: 1.5rem; margin-bottom: 0.2rem;}
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .card-git { top: 10%; left: 10%; animation-delay: 0s; }
+        .card-docker { top: 0; left: 40%; animation-delay: 1s; }
+        .card-jenkins { top: 0; right: 15%; animation-delay: 2s; }
+        .card-aws { top: 35%; right: 0; animation-delay: 3s; }
+        .card-k8s { bottom: 15%; right: 10%; animation-delay: 4s; }
+
+        /* --- POPULAR TECHNOLOGIES SECTION --- */
+        .tech-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-header {
+            min-width: 200px;
+        }
+
+        .tech-header h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .tech-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(255,255,255,0.02);
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: border 0.3s;
+        }
+        
+        .tech-item:hover {
+            border: 1px solid #334155;
+        }
+
+        .tech-item i {
+            font-size: 2rem;
+        }
+
+        .tech-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .tech-info p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* --- LIFECYCLE SECTION --- */
+        .lifecycle-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .lifecycle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        .lifecycle-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .lifecycle-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .btn-learn {
+            background: transparent;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lifecycle-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .flow-step {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        /* Specific Step Colors based on the image */
+        .step-1 { border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.05); }
+        .step-1 .step-icon { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        
+        .step-2 { border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.05); }
+        .step-2 .step-icon { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+
+        .step-3 { border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.05); }
+        .step-3 .step-icon { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+        .step-4 { border-color: rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.05); }
+        .step-4 .step-icon { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .step-text h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-main);
+        }
+
+        .step-text h4 span {
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-right: 0.3rem;
+        }
+
+        .step-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .flow-arrow {
+            color: #3b82f6;
+            font-size: 1.2rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-content { max-width: 100%; align-items: center; display: flex; flex-direction: column; }
+            .hero h1 { font-size: 3rem; }
+            .tech-section { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+            .tech-grid { flex-wrap: wrap; width: 100%; }
+            .lifecycle-flow { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); margin: 0.5rem 0; }
+            .flow-step { width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
+            .lifecycle-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
