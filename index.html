@@ -3,414 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevOps | From Code to Cloud</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Devicon -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    <title>Modern DevOps</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
-<header class="navbar">
-
-    <a href="#home" class="logo">
-        <span class="logo-infinity">∞</span>
-        <span>Dev<span>Ops</span></span>
-    </a>
-
+    <!-- NAVBAR -->
     <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#tools">Tools</a>
-        <a href="#process">Process</a>
-        <a href="#about">About</a>
+        <div class="logo">
+            <i class="fa-solid fa-infinity"></i>
+            Dev<span>Ops</span>
+        </div>
+        <ul class="nav-links">
+            <li class="active">Home</li>
+            <li>Tools</li>
+            <li>Process</li>
+            <li>About</li>
+        </ul>
+        <a href="#" class="btn-explore">Explore <i class="fa-solid fa-arrow-right"></i></a>
     </nav>
 
-    <a href="#tools" class="explore">
-        Explore <span>→</span>
-    </a>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    AUTOMATE <span>•</span> BUILD <span>•</span> DEPLOY <span>•</span> SCALE
+                </div>
+                <h1>Modern DevOps<br><span class="gradient-text">From Code to Cloud</span></h1>
+                <p>A complete DevOps toolchain to automate development, build, test and deploy applications on the cloud.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary"><i class="fa-solid fa-rocket"></i> Get Started</button>
+                    <button class="btn-secondary"><i class="fa-solid fa-play"></i> View Process</button>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <!-- CSS Infinite Loop Representation -->
+                    <i class="fa-solid fa-infinity infinity-loop"></i>
+                    
+                    <!-- Floating Cards -->
+                    <div class="float-card card-git">
+                        <i class="fa-brands fa-git-alt" style="color: var(--color-git);"></i>
+                        Git
+                    </div>
+                    <div class="float-card card-docker">
+                        <i class="fa-brands fa-docker" style="color: var(--color-docker);"></i>
+                        Docker
+                    </div>
+                    <div class="float-card card-jenkins">
+                        <i class="fa-brands fa-jenkins" style="color: var(--color-jenkins);"></i>
+                        Jenkins
+                    </div>
+                    <div class="float-card card-aws">
+                        <i class="fa-brands fa-aws" style="color: var(--color-aws);"></i>
+                        AWS
+                    </div>
+                    <div class="float-card card-k8s">
+                        <i class="fa-solid fa-cubes" style="color: var(--color-k8s);"></i>
+                        Kubernetes
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</header>
+        <!-- POPULAR TECHNOLOGIES -->
+        <section class="tech-section">
+            <div class="tech-header">
+                <h3>Popular Technologies</h3>
+                <p>Tools we use in this DevOps project.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fa-brands fa-git-alt" style="color: var(--color-git);"></i>
+                    <div class="tech-info">
+                        <h4>Git</h4>
+                        <p>Version Control</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-docker" style="color: var(--color-docker);"></i>
+                    <div class="tech-info">
+                        <h4>Docker</h4>
+                        <p>Containerization</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-jenkins" style="color: var(--color-jenkins);"></i>
+                    <div class="tech-info">
+                        <h4>Jenkins</h4>
+                        <p>CI/CD Automation</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-aws" style="color: var(--color-aws);"></i>
+                    <div class="tech-info">
+                        <h4>AWS</h4>
+                        <p>Cloud Computing</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-cubes" style="color: var(--color-k8s);"></i>
+                    <div class="tech-info">
+                        <h4>Kubernetes</h4>
+                        <p>Orchestration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- DEVOPS LIFECYCLE -->
+        <section class="lifecycle-section">
+            <div class="lifecycle-header">
+                <div>
+                    <h3>DevOps Lifecycle</h3>
+                    <p>From planning to production — a continuous journey.</p>
+                </div>
+                <button class="btn-learn">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="lifecycle-flow">
+                <!-- Step 1 -->
+                <div class="flow-step step-1">
+                    <div class="step-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                    <div class="step-text">
+                        <h4><span>01.</span> Plan</h4>
+                        <p>Plan features, tasks and development workflows.</p>
+                    </div>
+                </div>
+                
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
 
-<!-- ================= HERO ================= -->
+                <!-- Step 2 -->
+                <div class="flow-step step-2">
+                    <div class="step-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="step-text">
+                        <h4><span>02.</span> Code</h4>
+                        <p>Develop and manage application source code.</p>
+                    </div>
+                </div>
 
-<main>
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
 
-<section class="hero" id="home">
+                <!-- Step 3 -->
+                <div class="flow-step step-3">
+                    <div class="step-icon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="step-text">
+                        <h4><span>03.</span> Build</h4>
+                        <p>Build applications and create deployable artifacts.</p>
+                    </div>
+                </div>
 
-    <div class="hero-content">
+                <i class="fa-solid fa-arrow-right flow-arrow"></i>
 
-        <div class="pill">
-            <span>AUTOMATE</span>
-            <b>•</b>
-            <span>BUILD</span>
-            <b>•</b>
-            <span>DEPLOY</span>
-            <b>•</b>
-            <span>SCALE</span>
-        </div>
-
-        <h1>
-            Modern DevOps
-            <br>
-            <strong>From Code to Cloud</strong>
-        </h1>
-
-        <p>
-            A complete DevOps toolchain to automate development,
-            build, test and deploy applications on the cloud.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#tools" class="btn-primary">
-                <span>🚀</span>
-                Get Started
-            </a>
-
-            <a href="#process" class="btn-secondary">
-                <span>▶</span>
-                View Process
-            </a>
-
-        </div>
-
+                <!-- Step 4 -->
+                <div class="flow-step step-4">
+                    <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="step-text">
+                        <h4><span>04.</span> Deploy</h4>
+                        <p>Automatically deploy applications to production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-
-    <!-- ================= HERO VISUAL ================= -->
-
-    <div class="visual">
-
-        <div class="visual-glow"></div>
-
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-
-        <div class="platform">
-
-            <div class="platform-light"></div>
-
-            <div class="infinity">
-                ∞
-            </div>
-
-        </div>
-
-
-        <!-- Git -->
-
-        <div class="floating git">
-            <i class="devicon-git-plain colored"></i>
-            <span>Git</span>
-        </div>
-
-
-        <!-- Docker -->
-
-        <div class="floating docker">
-            <i class="devicon-docker-plain colored"></i>
-            <span>Docker</span>
-        </div>
-
-
-        <!-- Jenkins -->
-
-        <div class="floating jenkins">
-            <i class="devicon-jenkins-line colored"></i>
-            <span>Jenkins</span>
-        </div>
-
-
-        <!-- AWS -->
-
-        <div class="floating aws">
-
-            <div class="aws-text">
-                aws
-            </div>
-
-            <span>AWS</span>
-
-        </div>
-
-
-        <!-- Kubernetes -->
-
-        <div class="floating kubernetes">
-            <i class="devicon-kubernetes-plain colored"></i>
-            <span>Kubernetes</span>
-        </div>
-
-
-        <!-- Small glowing nodes -->
-
-        <span class="node node1"></span>
-        <span class="node node2"></span>
-        <span class="node node3"></span>
-        <span class="node node4"></span>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TECHNOLOGIES ================= -->
-
-<section class="panel technologies" id="tools">
-
-    <div class="section-title">
-
-        <div>
-            <h2>Popular Technologies</h2>
-            <p>Tools we use in this DevOps project.</p>
-        </div>
-
-    </div>
-
-
-    <div class="technology-grid">
-
-
-        <div class="tech-card">
-
-            <div class="tech-icon git-icon">
-                <i class="devicon-git-plain"></i>
-            </div>
-
-            <div>
-                <h3>Git</h3>
-                <p>Version Control</p>
-            </div>
-
-        </div>
-
-
-        <div class="tech-card">
-
-            <div class="tech-icon docker-icon">
-                <i class="devicon-docker-plain"></i>
-            </div>
-
-            <div>
-                <h3>Docker</h3>
-                <p>Containerization</p>
-            </div>
-
-        </div>
-
-
-        <div class="tech-card">
-
-            <div class="tech-icon jenkins-icon">
-                <i class="devicon-jenkins-line"></i>
-            </div>
-
-            <div>
-                <h3>Jenkins</h3>
-                <p>CI/CD Automation</p>
-            </div>
-
-        </div>
-
-
-        <div class="tech-card">
-
-            <div class="tech-icon aws-icon">
-                <span>aws</span>
-            </div>
-
-            <div>
-                <h3>AWS</h3>
-                <p>Cloud Computing</p>
-            </div>
-
-        </div>
-
-
-        <div class="tech-card">
-
-            <div class="tech-icon kubernetes-icon">
-                <i class="devicon-kubernetes-plain"></i>
-            </div>
-
-            <div>
-                <h3>Kubernetes</h3>
-                <p>Orchestration</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= DEVOPS LIFECYCLE ================= -->
-
-<section class="panel lifecycle-panel" id="process">
-
-    <div class="lifecycle-heading">
-
-        <div>
-            <h2>DevOps Lifecycle</h2>
-            <p>From planning to production — a continuous journey.</p>
-        </div>
-
-        <button>
-            Learn More <span>→</span>
-        </button>
-
-    </div>
-
-
-    <div class="lifecycle">
-
-
-        <!-- PLAN -->
-
-        <div class="life-card plan">
-
-            <div class="life-icon">
-                💡
-            </div>
-
-            <div>
-                <small>01. Plan</small>
-
-                <h3>Plan</h3>
-
-                <p>
-                    Plan features, tasks and development workflows.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="life-arrow">→</div>
-
-
-        <!-- CODE -->
-
-        <div class="life-card code">
-
-            <div class="life-icon">
-                &lt;/&gt;
-            </div>
-
-            <div>
-                <small>02. Code</small>
-
-                <h3>Code</h3>
-
-                <p>
-                    Develop and manage application source code.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="life-arrow">→</div>
-
-
-        <!-- BUILD -->
-
-        <div class="life-card build">
-
-            <div class="life-icon">
-                ⚙
-            </div>
-
-            <div>
-                <small>03. Build</small>
-
-                <h3>Build</h3>
-
-                <p>
-                    Build applications and create deployable artifacts.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="life-arrow">→</div>
-
-
-        <!-- DEPLOY -->
-
-        <div class="life-card deploy">
-
-            <div class="life-icon">
-                🚀
-            </div>
-
-            <div>
-                <small>04. Deploy</small>
-
-                <h3>Deploy</h3>
-
-                <p>
-                    Automatically deploy applications to production.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
-
-    <span>ABOUT PROJECT</span>
-
-    <h2>
-        Automate.
-        <strong>Integrate.</strong>
-        Deploy.
-    </h2>
-
-    <p>
-        A complete DevOps implementation using Git, Jenkins,
-        Docker, AWS and container technologies to automate
-        application delivery.
-    </p>
-
-</section>
-
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-logo">
-        Dev<span>Ops</span>
-    </div>
-
-    <p>© 2026 DevOps Project</p>
-
-</footer>
-
 
 </body>
 </html>
