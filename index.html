@@ -6,27 +6,28 @@
 
     <title>DevOps | From Code to Cloud</title>
 
-    <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Devicon -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
 
-    <div class="brand">
-        <div class="devops-symbol">∞</div>
-
-        <div class="brand-name">
-            Dev<span>Ops</span>
-        </div>
-    </div>
+    <a href="#home" class="logo">
+        <span class="logo-infinity">∞</span>
+        <span>Dev<span>Ops</span></span>
+    </a>
 
     <nav>
         <a href="#home" class="active">Home</a>
@@ -42,26 +43,28 @@
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
+<main>
 
 <section class="hero" id="home">
 
-    <div class="hero-left">
+    <div class="hero-content">
 
-        <div class="hero-label">
-            AUTOMATE
+        <div class="pill">
+            <span>AUTOMATE</span>
             <b>•</b>
-            BUILD
+            <span>BUILD</span>
             <b>•</b>
-            DEPLOY
+            <span>DEPLOY</span>
             <b>•</b>
-            SCALE
+            <span>SCALE</span>
         </div>
 
         <h1>
             Modern DevOps
             <br>
-            <span>From Code to Cloud</span>
+            <strong>From Code to Cloud</strong>
         </h1>
 
         <p>
@@ -69,14 +72,16 @@
             build, test and deploy applications on the cloud.
         </p>
 
-        <div class="buttons">
+        <div class="hero-buttons">
 
-            <a href="#tools" class="get-started">
-                🚀 &nbsp; Get Started
+            <a href="#tools" class="btn-primary">
+                <span>🚀</span>
+                Get Started
             </a>
 
-            <a href="#process" class="view-process">
-                ▶ &nbsp; View Process
+            <a href="#process" class="btn-secondary">
+                <span>▶</span>
+                View Process
             </a>
 
         </div>
@@ -84,114 +89,104 @@
     </div>
 
 
-    <!-- RIGHT VISUAL -->
+    <!-- ================= HERO VISUAL ================= -->
 
-    <div class="hero-right">
+    <div class="visual">
 
-        <div class="background-glow"></div>
+        <div class="visual-glow"></div>
 
-        <div class="server server-one"></div>
-        <div class="server server-two"></div>
-        <div class="server server-three"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
 
-        <div class="infinity">
-            ∞
+        <div class="platform">
+
+            <div class="platform-light"></div>
+
+            <div class="infinity">
+                ∞
+            </div>
+
         </div>
 
 
         <!-- Git -->
 
-        <div class="floating-card git-card">
-
-            <div class="card-logo git-logo">
-                ◆
-            </div>
-
-            <div>Git</div>
-
+        <div class="floating git">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
         </div>
 
 
         <!-- Docker -->
 
-        <div class="floating-card docker-card">
-
-            <div class="card-logo">
-                🐳
-            </div>
-
-            <div>Docker</div>
-
+        <div class="floating docker">
+            <i class="devicon-docker-plain colored"></i>
+            <span>Docker</span>
         </div>
 
 
         <!-- Jenkins -->
 
-        <div class="floating-card jenkins-card">
-
-            <div class="card-logo">
-                👨‍💻
-            </div>
-
-            <div>Jenkins</div>
-
+        <div class="floating jenkins">
+            <i class="devicon-jenkins-line colored"></i>
+            <span>Jenkins</span>
         </div>
 
 
         <!-- AWS -->
 
-        <div class="floating-card aws-card">
+        <div class="floating aws">
 
-            <div class="aws-logo">
+            <div class="aws-text">
                 aws
             </div>
 
-            <div>AWS</div>
+            <span>AWS</span>
 
         </div>
 
 
         <!-- Kubernetes -->
 
-        <div class="floating-card kubernetes-card">
-
-            <div class="card-logo">
-                ☸
-            </div>
-
-            <div>Kubernetes</div>
-
+        <div class="floating kubernetes">
+            <i class="devicon-kubernetes-plain colored"></i>
+            <span>Kubernetes</span>
         </div>
+
+
+        <!-- Small glowing nodes -->
+
+        <span class="node node1"></span>
+        <span class="node node2"></span>
+        <span class="node node3"></span>
+        <span class="node node4"></span>
 
     </div>
 
 </section>
 
 
-<!-- TECHNOLOGIES -->
+<!-- ================= TECHNOLOGIES ================= -->
 
-<section class="technologies" id="tools">
+<section class="panel technologies" id="tools">
 
-    <div class="technology-title">
+    <div class="section-title">
 
         <div>
             <h2>Popular Technologies</h2>
-
-            <p>
-                Tools we use in this DevOps project.
-            </p>
+            <p>Tools we use in this DevOps project.</p>
         </div>
 
     </div>
 
 
-    <div class="technology-list">
+    <div class="technology-grid">
 
 
-        <div class="technology">
+        <div class="tech-card">
 
-            <div class="technology-icon git-color">
-                ◆
+            <div class="tech-icon git-icon">
+                <i class="devicon-git-plain"></i>
             </div>
 
             <div>
@@ -202,10 +197,10 @@
         </div>
 
 
-        <div class="technology">
+        <div class="tech-card">
 
-            <div class="technology-icon">
-                🐳
+            <div class="tech-icon docker-icon">
+                <i class="devicon-docker-plain"></i>
             </div>
 
             <div>
@@ -216,10 +211,10 @@
         </div>
 
 
-        <div class="technology">
+        <div class="tech-card">
 
-            <div class="technology-icon">
-                👨‍💻
+            <div class="tech-icon jenkins-icon">
+                <i class="devicon-jenkins-line"></i>
             </div>
 
             <div>
@@ -230,10 +225,10 @@
         </div>
 
 
-        <div class="technology">
+        <div class="tech-card">
 
-            <div class="technology-icon aws-text">
-                aws
+            <div class="tech-icon aws-icon">
+                <span>aws</span>
             </div>
 
             <div>
@@ -244,10 +239,10 @@
         </div>
 
 
-        <div class="technology">
+        <div class="tech-card">
 
-            <div class="technology-icon">
-                ☸
+            <div class="tech-icon kubernetes-icon">
+                <i class="devicon-kubernetes-plain"></i>
             </div>
 
             <div>
@@ -262,24 +257,19 @@
 </section>
 
 
-<!-- PROCESS -->
+<!-- ================= DEVOPS LIFECYCLE ================= -->
 
-<section class="process" id="process">
+<section class="panel lifecycle-panel" id="process">
 
-    <div class="process-heading">
+    <div class="lifecycle-heading">
 
         <div>
-
             <h2>DevOps Lifecycle</h2>
-
-            <p>
-                From planning to production — a continuous journey.
-            </p>
-
+            <p>From planning to production — a continuous journey.</p>
         </div>
 
         <button>
-            Learn More →
+            Learn More <span>→</span>
         </button>
 
     </div>
@@ -290,14 +280,13 @@
 
         <!-- PLAN -->
 
-        <div class="stage plan">
+        <div class="life-card plan">
 
-            <div class="stage-icon">
+            <div class="life-icon">
                 💡
             </div>
 
             <div>
-
                 <small>01. Plan</small>
 
                 <h3>Plan</h3>
@@ -305,27 +294,23 @@
                 <p>
                     Plan features, tasks and development workflows.
                 </p>
-
             </div>
 
         </div>
 
 
-        <div class="stage-arrow">
-            →
-        </div>
+        <div class="life-arrow">→</div>
 
 
         <!-- CODE -->
 
-        <div class="stage code">
+        <div class="life-card code">
 
-            <div class="stage-icon">
+            <div class="life-icon">
                 &lt;/&gt;
             </div>
 
             <div>
-
                 <small>02. Code</small>
 
                 <h3>Code</h3>
@@ -333,27 +318,23 @@
                 <p>
                     Develop and manage application source code.
                 </p>
-
             </div>
 
         </div>
 
 
-        <div class="stage-arrow">
-            →
-        </div>
+        <div class="life-arrow">→</div>
 
 
         <!-- BUILD -->
 
-        <div class="stage build">
+        <div class="life-card build">
 
-            <div class="stage-icon">
+            <div class="life-icon">
                 ⚙
             </div>
 
             <div>
-
                 <small>03. Build</small>
 
                 <h3>Build</h3>
@@ -361,27 +342,23 @@
                 <p>
                     Build applications and create deployable artifacts.
                 </p>
-
             </div>
 
         </div>
 
 
-        <div class="stage-arrow">
-            →
-        </div>
+        <div class="life-arrow">→</div>
 
 
         <!-- DEPLOY -->
 
-        <div class="stage deploy">
+        <div class="life-card deploy">
 
-            <div class="stage-icon">
+            <div class="life-icon">
                 🚀
             </div>
 
             <div>
-
                 <small>04. Deploy</small>
 
                 <h3>Deploy</h3>
@@ -389,7 +366,6 @@
                 <p>
                     Automatically deploy applications to production.
                 </p>
-
             </div>
 
         </div>
@@ -399,42 +375,42 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
-    <div class="about-label">
-        ABOUT PROJECT
-    </div>
+    <span>ABOUT PROJECT</span>
 
     <h2>
         Automate.
-        <span>Integrate.</span>
+        <strong>Integrate.</strong>
         Deploy.
     </h2>
 
     <p>
-        This project demonstrates a complete DevOps workflow
-        using Git, Jenkins, Docker and AWS to automate
-        application development and deployment.
+        A complete DevOps implementation using Git, Jenkins,
+        Docker, AWS and container technologies to automate
+        application delivery.
     </p>
 
 </section>
 
 
-<!-- FOOTER -->
+</main>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <strong>
+    <div class="footer-logo">
         Dev<span>Ops</span>
-    </strong>
+    </div>
 
-    <p>
-        © 2026 DevOps Project
-    </p>
+    <p>© 2026 DevOps Project</p>
 
 </footer>
+
 
 </body>
 </html>
